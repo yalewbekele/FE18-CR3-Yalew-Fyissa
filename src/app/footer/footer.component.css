@@ -1,0 +1,21 @@
+.footer {
+  background-color: rgba(0, 0, 0, 0.836);
+  padding: 30px;
+  text-align: center;
+  color: rgba(29, 236, 236, 0.581);
+}
+.form-group{
+  text-align: left;
+  
+}
+.navbar{
+  text-align: left;
+  color: black;
+  font-family: "Great Vibes", cursive;
+  padding-left: 0%;
+  background-color: rgba(255, 255, 255, 0.896);
+  
+}
+.Order{
+  text-align: left;
+}

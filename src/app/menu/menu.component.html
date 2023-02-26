@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+      <div *ngFor="let food of menu; index as id">
+          <div class="card mx-auto" style="width: 18rem; ">
+              <img src="{{ food.image }}" class="card-img-top">
+              <div class="card-body">
+                <div class="name">
+                    {{food.name}}
+                </div>
+                  <h5 class="card-title">{{food.price|currency}}</h5>
+                  <div class="price">
+                    
+
+              <div class="prim">
+              <a class="btn btn-success" routerLink="/menu/{{id}}">Order</a>
+              <a class="btn btn-primary" (click)="addToCart(food)">Details</a>
+          </div>
+          <div>
+            
+          </div>
+      </div>
+  </div>
+</div>

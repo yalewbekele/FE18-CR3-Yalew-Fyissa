@@ -1,0 +1,25 @@
+<div class="container my-5">
+  <h1>Dishs Details</h1>
+
+
+  <div class="d-flex">
+      <div class="flex-shrink-0">
+          <img src="{{ foods.image }}" alt="...">
+          <h3>{{foods.name}}</h3>
+      <p>{{foods.description}}</p>
+      <div class="price">{{foods.price}}</div>
+      <!-- <div *ngIf="item.availability; then available else notAvailable"></div> -->
+      <!-- <ng-template #available>
+        <button (click)="showDetail()">Detail</button>
+        <button (click)="placeOrder()">Order</button>
+      </ng-template>
+      <ng-template #notAvailable>
+        <div class="not-available">Not available</div>
+      </ng-template> -->
+      </div>
+      <div class="flex-grow-1 ms-3">
+          {{ foods.name }} {{ foods.price }} <br>
+          <p class="btn btn-warning">Add to cart</p>
+      </div>
+  </div>
+</div>
