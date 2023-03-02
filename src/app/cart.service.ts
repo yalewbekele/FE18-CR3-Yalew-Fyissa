@@ -5,38 +5,85 @@ import { IFoods } from './ifoods';
 @Injectable({
   providedIn: 'root'
 })
+
+
+// export class CartService {
+//   foods: Array<IFoods> = [];
+//   constructor() { }
+
+//   addToCart(obj: IFoods) {
+//     this.foods.push(obj);
+//   }
+
+//   getCart() {
+//     return this.foods;
+//   }
+
+//   billTotal = 50;
+
+//   calculateServiceFee(): number {
+//     return this.billTotal * 0.1;
+//   }
+
+//   hasDiscount(): boolean {
+//     return this.billTotal > 40;
+//   }
+
+//   calculateDiscount(): number {
+//     return this.billTotal * 0.15;
+//   }
+
+//   calculateFinalAmount(): number {
+//     if (this.hasDiscount()) {
+//       return this.billTotal + this.calculateServiceFee() - this.calculateDiscount();
+//     } else {
+//       return this.billTotal + this.calculateServiceFee();
+//     }
+//   }
+// }
+
+
+
 export class CartService {
-  food: Array<IFoods> = [];
+  foods: Array<IFoods> = foods;
+  total: number = 0;
+  id: number = 0;
+  qtty: number =0;
+
   constructor() { }
 
-  addToCart(obj: IFoods) {
-    this.food.push(obj);
-  }
+ addToCart(dish: IFoods) {
+  this.foods.push(dish);
+}
 
-  getCart() {
-    return this.food;
-  }
 
-  billTotal = 50;
+getCart() {
+return this.foods;
+}
 
-  calculateServiceFee(): number {
-    return this.billTotal * 0.1;
-  }
 
-  hasDiscount(): boolean {
-    return this.billTotal > 40;
+clearCart() {
+  this.foods = foods; 
+    return this.foods;
   }
+  
+getLength(){
+return this.foods.length;
+}
 
-  calculateDiscount(): number {
-    return this.billTotal * 0.15;
-  }
+getTotal(){
+this.total= 0;
+for (let foods of this.foods) {
+  this.total = this.total + (foods.price * foods.price);
+}
+return this.total;
 
-  calculateFinalAmount(): number {
-    if (this.hasDiscount()) {
-      return this.billTotal + this.calculateServiceFee() - this.calculateDiscount();
-    } else {
-      return this.billTotal + this.calculateServiceFee();
-    }
-  }
+}
+
+notAvailable(id:number){
+this.qtty= 0;
+this.foods.splice(id,11);
+}
+
 }
 

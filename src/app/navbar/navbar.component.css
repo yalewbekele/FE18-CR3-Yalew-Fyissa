@@ -17,8 +17,10 @@
 }
 .card-title{
   text-align: center;
+  height: 20px;
   text-decoration-style: solid;
-  color:orangered;
+  color:olivedrab;
+  
 
 }
 .card-text{
@@ -29,8 +31,12 @@
 .navbar {
   font-weight: bold;
   font-size: large;
-  align-items: center;
-  padding: 1rem 1rem;
+  display: flex;
+  
+  
+
+  
+
 
 }
 
@@ -41,3 +47,4 @@
 
 
   }
+  

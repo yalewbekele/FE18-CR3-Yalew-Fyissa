@@ -1,5 +1,5 @@
-.prim{
-  text-align:left;
+
+  /* ext-align:left;
   margin-left: 1px;
   text-justify: 0px;
   background-color:rgba(0, 0, 0, 0.76);
@@ -7,7 +7,17 @@
   padding: 1rem 0;
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: left; */ */
 
   
+.card-title{
+  text-align: left;
+  color: brown;
+  display: flex;
+  
 }
+
+.notAvailable{
+  color: brown;
+}
+

@@ -18,7 +18,8 @@ export class MenuDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
-      this.foods= params[this.id];
+      this.foods= foods[this.id ];
     });
   }
 }
+

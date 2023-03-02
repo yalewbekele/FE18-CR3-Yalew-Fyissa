@@ -9,7 +9,10 @@ import { IFoods } from '../ifoods';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  menu: Array<IFoods> = foods;
+foods: Array<IFoods> = foods;
+total: number = 0;
+id: number = 0;
+qtty: number =0;
 
   constructor(private cs: CartService) {
     
@@ -19,8 +22,8 @@ export class MenuComponent {
     alert("added");
     this.cs.addToCart(foods);
   }
-  // notAvailable(foods: IFood) {
-  //   alert("notAvailable");
-  //   this.cs.notAvailable(1);
-  // }
+  notAvailable(foods: IFoods) {
+    alert("notAvailable");
+    this.cs.addToCart(foods);
+  }
 }

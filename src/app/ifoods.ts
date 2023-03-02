@@ -3,4 +3,5 @@ export interface IFoods {
   price: number;
   image: string;
   description:string;
+  availability:boolean;
 }
