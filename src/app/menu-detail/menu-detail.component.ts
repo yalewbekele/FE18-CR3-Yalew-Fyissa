@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router'; 
+import { ActivatedRoute, Params } from '@angular/router';
 import { foods } from '../foods';
 import { IFoods } from '../ifoods';
 
@@ -13,12 +13,12 @@ export class MenuDetailComponent implements OnInit {
   id: number = 0;
 
   constructor(private route: ActivatedRoute) { }
-  
+
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
-      this.foods= foods[this.id ];
+      this.foods = foods[this.id];
     });
   }
 }

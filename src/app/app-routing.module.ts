@@ -10,14 +10,14 @@ const routes: Routes = [{
   path: "", component: HomeComponent
 }, {
   path: "menu", component: MenuComponent
-  }, {
-    path: "about-us", component: AboutUsComponent
-    }, {
-      path: "menu-detail", component: MenuDetailComponent
-      },
-  {
+}, {
+  path: "about-us", component: AboutUsComponent
+}, {
+  path: "menu-detail", component: MenuDetailComponent
+},
+{
   path: "cart", component: CartComponent
-  }, {
+}, {
   path: "menu/:id", component: MenuDetailComponent
 }];
 

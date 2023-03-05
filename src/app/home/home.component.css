@@ -1,18 +1,89 @@
-.card-img{
+.card-img {
   width: 1900px;
   height: 600px;
   padding: 10px;
-  
-}
-.card-text{
-  text-align: center;
-  color: black;
-  font-size: 50px;
-  font-family: "Great Vibes", cursive;
-}
-.card-title{
-  text-align: center;
-  color: black;
-  font-size: 50px;
 
 }
+
+.card-text {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-title {
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  padding-top: 100px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Great Vibes", cursive;
+
+
+}
+
+.top {
+  width: 600px;
+  height: 0px;
+  padding-left: 20px;
+  padding-top: 100px;
+}
+
+.top_center {
+  text-align: center;
+  padding-left: 500px;
+}
+
+.py-5 {
+  font-family: "Great Vibes", cursive;
+  margin-right: 100px;
+
+}
+
+.topic {
+  font-size: 30px;
+  text-align: left;
+}
+
+.img-fluid {
+  height: 600px;
+  padding-bottom: 30px;
+}
+
+.topic3 {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+}
+
+.col {}
+
+.minitop {
+  font-family: "Great Vibes", cursive;
+  padding-top: 30px;
+}
+
+.text_add {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 40px;
+  text-align: left;
+}
+
+.clearfix {
+  padding-top: 40px;
+  text-align: left;
+
+}
+
+.topic2 {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+
+}
+
+.text_imp {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+

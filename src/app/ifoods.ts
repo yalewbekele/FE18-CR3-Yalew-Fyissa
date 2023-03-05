@@ -3,5 +3,7 @@ export interface IFoods {
   price: number;
   image: string;
   description:string;
+  qtty:number;
   availability:boolean;
+ 
 }

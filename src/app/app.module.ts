@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
-// import { MenuDtailComponent } from './menu-detail/menu-detail.component';
+import { MenuDetailComponent } from './menu-detail/menu-detail.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { MenuComponent } from './menu/menu.component';
     CartComponent,
     HomeComponent,
     MenuComponent,
-    // MenuDetailComponent
+    MenuDetailComponent
   ],
   imports: [
     BrowserModule,

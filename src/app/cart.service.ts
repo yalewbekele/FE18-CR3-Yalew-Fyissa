@@ -82,8 +82,7 @@ return this.total;
 
 notAvailable(id:number){
 this.qtty= 0;
-this.foods.splice(id,11);
+this.foods.splice(id,1);
 }
 
 }
-

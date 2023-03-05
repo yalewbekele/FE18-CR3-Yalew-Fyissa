@@ -1,16 +1,24 @@
-
 <div *ngFor="let foods of foods">
     <p>{{ foods.name }}</p>
     <p>{{ foods.price }}</p>
     <hr>
 </div>
+<div class="img-fluid" style="width:20%">
 
-<div class="summary pt-3 mb-5" *ngIf="foods.length!=0">
-    <h1>Summary</h1>
-    <p class="total fs-5">No. of items: {{foods.length}}</p>
-    <h4 class="total"><b>Total: </b>{{total.toFixed(2)}} Euro</h4>
-    <h5 class="total">Service Charge (10%): {{(total * 0.1).toFixed(2)}} Euro</h5>
-    <h5 class="total" *ngIf="total> 40"><b>Discount (15%) </b> orders above 40 Euro: {{(total * 0.15).toFixed(2)}} Euro</h5>
-    <h4 class="total"><b>Total Amount </b> (including service charge{{total > 40 ? " and discount" : ""}}): {{(total + (total * 0.1) - (total > 40 ? total * 0.15 : 0)).toFixed(2)}} Euro</h4>
+    <div>
 
-</div>
+        <p class="total fs-5">No. of items: {{foods.length}}</p>
+        <h4 class="total"><b>Total: </b>{{total.toFixed(2)}} Euro</h4>
+        <h5 class="total">Service Charge (10%): {{(total * 0.1).toFixed(2)}} Euro</h5>
+        <h5 class="total" *ngIf="total> 40"><b>Discount (15%) </b> orders above 40 Euro: {{(total * 0.15).toFixed(2)}}
+            Euro</h5>
+        <h4 class="total"><b>Total Amount </b> (including service charge{{total > 40 ? " and discount" : ""}}): {{(total
+            + (total * 0.1) - (total > 40 ? total * 0.15 : 0)).toFixed(2)}} Euro</h4>
+    </div>
+    <div class="summary pt-3 mb-5" *ngIf="foods.length!=0">
+        <h2 class="summary">Summary</h2>
+        <p class="total1">No. of items: {{foods.length}}</p>
+        <h4 class="total2"><b>Total (including VAT): </b>
+            {{total.toFixed(2)}} Euro</h4>
+
+    </div>

@@ -1,0 +1,17 @@
+.card-title{
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+}
+.card-text{
+  text-align: left;
+  padding-left: 60px;
+}
+.text{
+  text-align: left;
+  padding-left: 90px;
+}
+.text-muted{
+  font-size: large;
+  padding-left: 60px;
+
+}

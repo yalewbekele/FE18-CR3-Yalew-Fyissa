@@ -9,13 +9,13 @@ import { IFoods } from '../ifoods';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-foods: Array<IFoods> = foods;
-total: number = 0;
-id: number = 0;
-qtty: number =0;
+  foods: Array<IFoods> = foods;
+  total: number = 0;
+  id: number = 0;
+  availabel: number = 0;
 
   constructor(private cs: CartService) {
-    
+
   }
 
   addToCart(foods: IFoods) {
@@ -26,4 +26,6 @@ qtty: number =0;
     alert("notAvailable");
     this.cs.addToCart(foods);
   }
+
+
 }

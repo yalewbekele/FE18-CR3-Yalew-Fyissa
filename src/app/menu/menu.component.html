@@ -1,64 +1,38 @@
-<div class="container mb-5">
-  <div class="">
-    <div class="d-flex justify-content-between">
-      <div class="">
-        <img
-          src="https://i0.wp.com/www.mercurynews.com/wp-content/uploads/2022/09/MAG-50BEST-1103-7-1.jpg?fit=620%2C9999px&ssl=1"
-          alt="...">
-      </div>
-      <div class="">
-        <div class="card-body">
-          <h5 class="card-title">Asian Restaurant in centeral Europe</h5>
-          <p class="card-text">Our Family-Friendly Guide to Asian Food With Recipes. We have been consistently and
-            faithfuly suriving our custumer. Our MOTO is "custumer is a king". This is not only our confesinins but also
-            our custumers too.<br>
-          <ul class="text">
-            <i> We provide fresh and healthy foods
-            </i><br>
-            <i>
-              Our price is fair and acceptebl
-            </i><br>
-            <i>
-              We have 15% discount for our custumenys when using more than 100Euro.
-            </i><br>
-            <i>food is amongst the most delicious food we tried on our travels. Here are our favourite Sri Lankan
-              dishes,
-              including some easy recipes to try at home.</i>
-          </ul>
+<div class="topic_menu">
+  <h1>Our specialites</h1>
+</div>
+<div class=" row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 mb-2">
+  <div class="mb-5" *ngFor="let foods of foods; index as id">
 
-          <p class="card-text"><small class="text-muted">Thank you for your visitation</small></p>
+    <hr>
+    <div class="card ">
+
+      <img src="{{ foods.image }}" style="height: 250px;" class="card-img-top">
+
+      <div class="card-body">
+        <div class="name">
+          {{foods.name}}
+
+          <hr>
+        </div>
+        <h5 class="card-title">{{foods.price|currency}}</h5>
+
+        <div *ngIf="foods.availability; then availabel else notAvailable"></div>
+        <ng-template #availabel>
+
+        </ng-template>
+        <hr>
+        <ng-template #notAvailable>
+          <div class="notAvailable">This food is currently not available</div>
+
+        </ng-template>
+        <div class="price">
+          <div class="prim">
+            <a class="btn btn-success" routerLink="/menu/{{id}}">Details</a>
+            <a class="btn btn-primary" (click)="addToCart(foods)">Cart</a>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class=" d-flex justify-content-center mb-5">
-  <div class=" row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 mb-2">
-    <div class="mb-5" *ngFor="let foods of foods; index as id">
-      <div class="card ">
-        <img src="{{ foods.image }}" style="height: 250px;" class="card-img-top">
-        <div class="card-body">
-          <div class="name">
-            {{foods.name}}
-          </div>
-          <h5 class="card-title">{{foods.price|currency}}</h5>
-
-          <div *ngIf="foods.availability; then available else notAvailable"></div>
-          <ng-template #available>
-
-          </ng-template>
-
-          <ng-template #notAvailable>
-            <div class="notAvailable">This food is currently not available</div>
-          </ng-template>
-
-          <div class="price">
-            <div class="prim">
-              <a class="btn btn-success" routerLink="/menu/{{id}}">Details</a>
-              <a class="btn btn-primary" (click)="addToCart(foods)">Cart</a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>

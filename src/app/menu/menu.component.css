@@ -1,14 +1,3 @@
-
-  /* ext-align:left;
-  margin-left: 1px;
-  text-justify: 0px;
-  background-color:rgba(0, 0, 0, 0.76);
-  color: white;
-  padding: 1rem 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: left; */ */
-
   
 .card-title{
   text-align: left;
@@ -20,4 +9,12 @@
 .notAvailable{
   color: brown;
 }
-
+.topic_menu{
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 90px;
+}
+.prim{
+  text-align: left;
+   
+}

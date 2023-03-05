@@ -1,37 +1,32 @@
 <div class="container my-5 ">
   <h1>Dishs Details</h1>
-
-
   <div class="d-flex">
     <div class="flex-shrink-0">
       <img src="{{ foods.image }}" alt="...">
       <h3>{{foods.name}}</h3>
       <p>{{foods.description}}</p>
-      <p>{{foods.availability}}</p>
-    <div class="price">{{foods.price}}</div>
 
-      <!-- <div *ngIf="foods.availability; then available else notAvailable"></div>
-      <ng-template #available>
-       <button (click)="(details)"><Details></Details></button>
-       <button (click)="addToCart()">Cart</button>
-     </ng-template>  -->
+      <div class="price">{{foods.price|currency}}</div>
 
-     <ng-template [ngIf]="foods.available" [ngIfElse]="unavailable">
-      <!-- <button class="btn btn-light me-md-2 btn-sm" type="button" style="background-color:white" routerLink="/dishes/{{i}}">Details</button> -->
-      <ng-template [ngIf]="available" [ngIfElse]="unavailable">
-          <button [id]="['','Item added to cart', 'success']" class=" btn btn-light btn-sm " type="button "  (click)="(foods) ">Cart</button>
+      <ng-template [ngIf]="foods.availability" [ngIfElse]="notAvailabel">
+
+        <ng-template [ngIf]="notAvailabel" [ngIfElse]="notAvailabel">
+          <button [id]="['','Item added to cart', 'success']" class=" btn btn-light btn-sm " type="button "
+            (click)="(foods) ">Thank you for your ordering</button>
+        </ng-template>
       </ng-template>
-  </ng-template>
 
 
-      <ng-template #notAvailable>
-       <div class="not-available">Not available</div>
-     </ng-template> 
+      <ng-template #notAvailabel>
+        <div class="not-available">Not availabel</div>
+      </ng-template>
 
     </div>
+
     <div class="flex-grow-1 ms-3">
-      {{ foods.name }} {{ foods.price }} <br>
+      {{ foods.name }} {{ foods.price|currency }} <br>
       <p class="btn btn-warning">Add to cart</p>
     </div>
+
   </div>
 </div>
