@@ -15,10 +15,4 @@
         <h4 class="total"><b>Total Amount </b> (including service charge{{total > 40 ? " and discount" : ""}}): {{(total
             + (total * 0.1) - (total > 40 ? total * 0.15 : 0)).toFixed(2)}} Euro</h4>
     </div>
-    <div class="summary pt-3 mb-5" *ngIf="foods.length!=0">
-        <h2 class="summary">Summary</h2>
-        <p class="total1">No. of items: {{foods.length}}</p>
-        <h4 class="total2"><b>Total (including VAT): </b>
-            {{total.toFixed(2)}} Euro</h4>
-
-    </div>
+   

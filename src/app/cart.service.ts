@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { foods } from './foods';
 import { IFoods } from './ifoods';
 
 @Injectable({
@@ -45,7 +44,7 @@ import { IFoods } from './ifoods';
 
 
 export class CartService {
-  foods: Array<IFoods> = foods;
+  foods: Array<IFoods> = [];
   total: number = 0;
   id: number = 0;
   qtty: number =0;
@@ -63,7 +62,7 @@ return this.foods;
 
 
 clearCart() {
-  this.foods = foods; 
+  this.foods = []; 
     return this.foods;
   }
   
@@ -74,8 +73,9 @@ return this.foods.length;
 getTotal(){
 this.total= 0;
 for (let foods of this.foods) {
-  this.total = this.total + (foods.price * foods.price);
+  this.total = this.total + (foods.price );
 }
+
 return this.total;
 
 }
